@@ -6,11 +6,11 @@ public class Bug {
     int bugPriority;
     String bugStatus;
 
-    Bug(String bugDescription, String reporterEmailAddress, int bugPriority, String bugStatus){
+    Bug(String bugDescription, String reporterEmailAddress, int bugPriority){
         this.bugDescription = bugDescription;
         this.reporterEmailAddress = reporterEmailAddress;
         this.bugPriority = bugPriority;
-        this.bugStatus = bugStatus;
+        this.bugStatus = "Zamknięty";
     }
 
     void getAllInfo(){
@@ -21,8 +21,8 @@ public class Bug {
         System.out.println("------------------------------------");
     }
 
-    String getReporterEmailAddress(){
-        return reporterEmailAddress;
+    void getReporterEmailAddress(){
+        System.out.println("Email: " + reporterEmailAddress);
     }
 
     void getBugStatus() {
