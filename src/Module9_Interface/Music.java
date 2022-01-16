@@ -8,12 +8,15 @@ public interface Music {
 
     //3. tylko metody abstrakcyjne
 
-     void playMusic(); //zawsze będą = public abstract
+    void playMusic(); //zawsze będą = public abstract
     void pauseMusic();
     void stopMusic();
 
     default void sayHelloFromMusic(){
         System.out.println("Hello from default");
+    }
+    default void sayHello() {
+        System.out.println("Say hello from music");
     }
 
 }
