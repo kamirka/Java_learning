@@ -3,7 +3,7 @@ package Module10_Collections.Lists;
 
 import java.util.Objects;
 
-public class User {
+public class User implements Comparable<User>{
 
     private static int userCounter = 0;
     //1. Pola obiektu, które opisują z czego bedzie sie skladal dany obiekt
@@ -137,5 +137,17 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName, email, age, isAdult);
+    }
+
+    @Override
+    public int compareTo(User user) {
+        int compareResult = this.getFirstName().compareTo(user.getFirstName());
+        if(compareResult==0){
+            compareResult =this.getLastName().compareTo(user.getLastName());
+        }
+        return compareResult;
+        //-1 jeśli obiekt pierwszy jest mniejszy niż drugi obiekt
+        //0 jeśli obiekty są takie same
+        //1 jeśli obiekt drugi jest mniejszy niż pierwszy
     }
 }
