@@ -1,4 +1,4 @@
-package Module10_Collections.Lists;
+package Module10_Collections;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

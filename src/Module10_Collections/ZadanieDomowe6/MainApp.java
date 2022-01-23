@@ -1,4 +1,4 @@
-package Module10_Collections.Lists.ZadanieDomowe6;
+package Module10_Collections.ZadanieDomowe6;
 
 import java.util.*;
 

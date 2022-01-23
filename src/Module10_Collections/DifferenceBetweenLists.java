@@ -1,4 +1,4 @@
-package Module10_Collections.Lists;
+package Module10_Collections;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
