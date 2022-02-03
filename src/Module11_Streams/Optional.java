@@ -1,5 +1,7 @@
 package Module11_Streams;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -17,6 +19,11 @@ public class Optional {
         users.add(new User("Kamil","Aaaa","k@test.pl", 31));
         users.add(new User("Feliks","Jakiś","f@test.pl", 41));
         users.add(new User("Feliks","Jakiś","f@test.pl", 16));
+        users.add(new User("Kasia","Słaba","ks@test.pl", 11));
+        users.add(new User("Kasia","Słaba","ks@test.pl", 11));
+        users.add(new User("Kasia","Słaba","ks@test.pl", 11));
+        users.add(new User("Kasia","Słaba","ks@test.pl", 11));
+        users.add(new User("Kasia","Słaba","ks@test.pl", 11));
         users.add(new User("Kasia","Słaba","ks@test.pl", 11));
         users.add(new User("Asia","Dziwna","ad@test.pl", 2));
         users.add(new User("Jakub","Testowy","jtk@test.pl", 28));
@@ -42,5 +49,21 @@ public class Optional {
         }else {
             System.out.println("Nie znalazłam takiego elementu");
         }
+
+        String kasia = users.stream()
+                .map(User::getFirstName)
+                .filter(s->s.equals("Kasia"))
+                .findFirst()
+                .orElse("Nie ma użytkownika o imieniu Kasia");
+
+        System.out.println(kasia);
+
+        Integer age = users.stream()
+                .map(User::getAge)
+                .max(Integer::compareTo)
+                .orElse(-1);
+
+        System.out.println(age);
+
     }
 }
