@@ -1,14 +1,13 @@
-package Module11_Streams.ZadanieDomowe7;
+package Module11_Streams.HomeWork7;
 
 import java.util.Objects;
-import java.util.function.Predicate;
 
-public class Hdd {
+    public class Ram {
 
         private String brand;
         private int size;
 
-        public Hdd(String brand, int size) {
+        public Ram(String brand, int size) {
             this.brand = brand;
             this.size = size;
         }
@@ -22,6 +21,7 @@ public class Hdd {
         }
 
         public int getSize() {
+
             return size;
         }
 
@@ -30,25 +30,24 @@ public class Hdd {
         }
 
         @Override
-        public String toString() {
-            return "Hdd{" +
-                    "brand='" + brand + '\'' +
-                    ", size=" + size +
-                    '}';
-        }
-
-        @Override
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-            Hdd hdd = (Hdd) o;
-            return size == hdd.size &&
-                    Objects.equals(brand, hdd.brand);
+            Ram ram = (Ram) o;
+            return size == ram.size &&
+                    Objects.equals(brand, ram.brand);
         }
 
         @Override
         public int hashCode() {
-
             return Objects.hash(brand, size);
+        }
+
+        @Override
+        public String toString() {
+            return "Ram{" +
+                    "brand='" + brand + '\'' +
+                    ", size=" + size +
+                    '}';
         }
     }

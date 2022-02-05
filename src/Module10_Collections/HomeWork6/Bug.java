@@ -1,6 +1,9 @@
-package Module4_AccessModifiers.ZadanieDomowe3.model;
+package Module10_Collections.HomeWork6;
 
-public class Bug {
+
+import java.util.Objects;
+
+public class Bug implements Comparable<Bug>{
     private String bugDescription;
     private String reporterEmailAddress;
     private int bugPriority;
@@ -67,6 +70,36 @@ public class Bug {
     }
 
     public int getBugPriority() {
-return bugPriority;
+        return bugPriority;
+    }
+
+    @Override
+    public String toString() {
+        return "Bug{" +
+                "bugDescription='" + bugDescription + '\'' +
+                ", reporterEmailAddress='" + reporterEmailAddress + '\'' +
+                ", bugPriority=" + bugPriority +
+                ", bugStatus='" + bugStatus + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Bug bug = (Bug) o;
+        return bugPriority == bug.bugPriority && Objects.equals(bugDescription, bug.bugDescription) && Objects.equals(reporterEmailAddress, bug.reporterEmailAddress) && Objects.equals(bugStatus, bug.bugStatus);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bugDescription, reporterEmailAddress, bugPriority, bugStatus);
+    }
+
+    @Override
+    public int compareTo(Bug bug) {
+        int comparedBugs = this.getBugDescription().compareTo(bug.getBugDescription());
+
+        return comparedBugs;
     }
 }

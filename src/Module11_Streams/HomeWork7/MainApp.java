@@ -1,4 +1,4 @@
-package Module11_Streams.ZadanieDomowe7;
+package Module11_Streams.HomeWork7;
 
 import java.util.ArrayList;
 import java.util.Comparator;

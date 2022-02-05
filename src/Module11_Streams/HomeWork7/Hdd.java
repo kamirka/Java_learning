@@ -1,13 +1,13 @@
-package Module11_Streams.ZadanieDomowe7;
+package Module11_Streams.HomeWork7;
 
 import java.util.Objects;
 
-    public class Ram {
+public class Hdd {
 
         private String brand;
         private int size;
 
-        public Ram(String brand, int size) {
+        public Hdd(String brand, int size) {
             this.brand = brand;
             this.size = size;
         }
@@ -21,7 +21,6 @@ import java.util.Objects;
         }
 
         public int getSize() {
-
             return size;
         }
 
@@ -30,24 +29,25 @@ import java.util.Objects;
         }
 
         @Override
+        public String toString() {
+            return "Hdd{" +
+                    "brand='" + brand + '\'' +
+                    ", size=" + size +
+                    '}';
+        }
+
+        @Override
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-            Ram ram = (Ram) o;
-            return size == ram.size &&
-                    Objects.equals(brand, ram.brand);
+            Hdd hdd = (Hdd) o;
+            return size == hdd.size &&
+                    Objects.equals(brand, hdd.brand);
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(brand, size);
-        }
 
-        @Override
-        public String toString() {
-            return "Ram{" +
-                    "brand='" + brand + '\'' +
-                    ", size=" + size +
-                    '}';
+            return Objects.hash(brand, size);
         }
     }

@@ -1,4 +1,4 @@
-package Module9_Interface.ZadanieDomowe5;
+package Module9_Interface.HomeWork5;
 
 public class Bug implements ConsoleNotification {
     private String bugDescription;

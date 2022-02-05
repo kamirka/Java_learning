@@ -1,4 +1,4 @@
-package Module2_DataTypes.ZadanieDomowe1;
+package Module2_DataTypes.HomeWork1;
 
 public class ZadanieDomowe1 {
     public static void main(String[] args) {

@@ -1,22 +1,25 @@
-package Module11_Streams.ZadanieDomowe7;
+package Module11_Streams.HomeWork7;
 
-    public class Laptop extends Computer {
+    public class PC extends Computer {
 
-        private int batteryLevel;
+        private boolean power;
 
-        public Laptop(String name, String type, Hdd hdd, Ram ram, int batteryLevel) {
-            super(name, type, hdd, ram); //super zawsze musi być pierwszą linijką
-            this.batteryLevel = batteryLevel;
+        public PC(String name, String type, Hdd hdd, Ram ram) {
+            super(name, type, hdd, ram);
+            power = false;
+        }
 
+        public void showComputerName() {
+            System.out.println(name);
         }
 
         public int volumeUP() {
-            return volumeLevel += 5;
+            return volumeLevel += 1;
         }
 
         @Override
         public int volumeDOWN() {
-            volumeLevel -= 2;
+            volumeLevel -= 1;
             if (volumeLevel <= 0) {
                 return 0;
             } else {
@@ -33,7 +36,6 @@ package Module11_Streams.ZadanieDomowe7;
             return volumeLevel;
         }
 
-
         @Override
         public int volumeDOWN(int volume) {
             volumeLevel = volumeLevel - volume;
@@ -45,22 +47,22 @@ package Module11_Streams.ZadanieDomowe7;
 
         @Override
         public void switchOn() {
-
-            System.out.println("Checking battery level");
-            if (batteryLevel > 20) {
+            System.out.println("Checing power supply");
+            if (power) {
                 super.switchOn();
             } else {
-                System.out.println("Battery level to low");
+                System.out.println("Turn power ON!");
             }
         }
 
         @Override
         public void switchOff() {
-            System.out.println("Wyłączam Laptop: " + name);
+
+            System.out.println("Wyłączam PC: " + name);
+
         }
 
-        public void setBatteryLevel(int newBatteryLevel) {
-            batteryLevel = newBatteryLevel;
+        public void setPower(boolean newPower) {
+            power = newPower;
         }
-
     }

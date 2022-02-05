@@ -1,4 +1,4 @@
-package Module3_ClassesAndObjects.ZadanieDomowe2;
+package Module3_ClassesAndObjects.HomeWork2;
 
 public class MainBug {
     public static void main(String[] args) {

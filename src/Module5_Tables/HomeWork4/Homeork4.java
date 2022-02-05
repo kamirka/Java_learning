@@ -1,4 +1,4 @@
-package Module5_Tables.ZadanieDomowe4;
+package Module5_Tables.HomeWork4;
 
 public class Homeork4 {
     public static void main(String[] args) {

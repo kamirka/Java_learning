@@ -1,6 +1,6 @@
-package Module4_AccessModifiers.ZadanieDomowe3;
+package Module4_AccessModifiers.HomeWork3;
 
-import Module4_AccessModifiers.ZadanieDomowe3.model.Bug;
+import Module4_AccessModifiers.HomeWork3.model.Bug;
 
 public class MainBug {
     public static void main(String[] args) {

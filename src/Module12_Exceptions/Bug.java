@@ -1,9 +1,9 @@
-package Module10_Collections.ZadanieDomowe6;
+package Module12_Exceptions;
 
 
 import java.util.Objects;
 
-public class Bug implements Comparable<Bug>{
+public class Bug {
     private String bugDescription;
     private String reporterEmailAddress;
     private int bugPriority;
@@ -96,10 +96,4 @@ public class Bug implements Comparable<Bug>{
         return Objects.hash(bugDescription, reporterEmailAddress, bugPriority, bugStatus);
     }
 
-    @Override
-    public int compareTo(Bug bug) {
-        int comparedBugs = this.getBugDescription().compareTo(bug.getBugDescription());
-
-        return comparedBugs;
-    }
 }

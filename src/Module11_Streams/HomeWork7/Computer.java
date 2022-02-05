@@ -1,4 +1,4 @@
-package Module11_Streams.ZadanieDomowe7;
+package Module11_Streams.HomeWork7;
 
         abstract public class Computer {
             protected String name;
